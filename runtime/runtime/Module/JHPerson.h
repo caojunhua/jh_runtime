@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy, nonatomic) NSString *name;
 
 + (void)run;
+
+- (void)run;
+
+- (void)eat;
 @end
 
 NS_ASSUME_NONNULL_END

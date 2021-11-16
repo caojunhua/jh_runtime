@@ -18,6 +18,7 @@
 		F892715F273EAEE900DE9FA6 /* runtimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F892715E273EAEE900DE9FA6 /* runtimeUITests.m */; };
 		F892717A273EAFDA00DE9FA6 /* NSObject+myJson.m in Sources */ = {isa = PBXBuildFile; fileRef = F8927179273EAFDA00DE9FA6 /* NSObject+myJson.m */; };
 		F8927182273EB2E000DE9FA6 /* JHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F8927181273EB2E000DE9FA6 /* JHPerson.m */; };
+		F89271F02743F4C500DE9FA6 /* JHCar.m in Sources */ = {isa = PBXBuildFile; fileRef = F89271EF2743F4C500DE9FA6 /* JHCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		F8927179273EAFDA00DE9FA6 /* NSObject+myJson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+myJson.m"; sourceTree = "<group>"; };
 		F8927180273EB2E000DE9FA6 /* JHPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHPerson.h; sourceTree = "<group>"; };
 		F8927181273EB2E000DE9FA6 /* JHPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHPerson.m; sourceTree = "<group>"; };
+		F89271EE2743F4C500DE9FA6 /* JHCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHCar.h; sourceTree = "<group>"; };
+		F89271EF2743F4C500DE9FA6 /* JHCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 			children = (
 				F8927180273EB2E000DE9FA6 /* JHPerson.h */,
 				F8927181273EB2E000DE9FA6 /* JHPerson.m */,
+				F89271EE2743F4C500DE9FA6 /* JHCar.h */,
+				F89271EF2743F4C500DE9FA6 /* JHCar.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				F8927139273EAEE700DE9FA6 /* AppDelegate.m in Sources */,
 				F892714A273EAEE800DE9FA6 /* main.m in Sources */,
 				F892713C273EAEE700DE9FA6 /* SceneDelegate.m in Sources */,
+				F89271F02743F4C500DE9FA6 /* JHCar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

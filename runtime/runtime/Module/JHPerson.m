@@ -11,4 +11,12 @@
 + (void)run {
     
 }
+
+- (void)run {
+    NSLog(@"%s", __func__);
+}
+
+- (void)eat {
+    NSLog(@"%s", __func__);
+}
 @end
