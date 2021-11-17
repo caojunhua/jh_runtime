@@ -17,6 +17,35 @@
 
 @implementation ViewController
 
+- (IBAction)click:(id)sender {
+    NSLog(@"点击按钮");
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self testNSMutableDictionary];
+    
+}
+
+- (void)testNSMutableDictionary {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:@"11" forKey:@"11a"];
+    [dict setValue:@"22" forKey:nil];
+    
+    NSLog(@"dict--%@",dict);
+}
+
+- (void)testMutableArray {
+    
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:@"11"];
+    [array addObject:nil];
+    
+    NSLog(@"array:%@",array);
+}
+
 void replaceRun() {
     NSLog(@"%s", __func__);
 }
@@ -34,10 +63,7 @@ void eat(id self, SEL _cmd) {
 
 
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (void)demo {
     /****************************************************************************************************/
     
     NSDictionary *json = @{
@@ -129,6 +155,5 @@ void eat(id self, SEL _cmd) {
     
     NSLog(@"-----------------------");
 }
-
 
 @end
