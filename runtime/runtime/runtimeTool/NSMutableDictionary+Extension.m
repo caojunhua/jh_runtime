@@ -11,11 +11,17 @@
 @implementation NSMutableDictionary (Extension)
 
 + (void)load {
-    Class cls = NSClassFromString(@"__NSDictionaryM");
-    Method method1 = class_getInstanceMethod(cls, @selector(setObject:forKey:));
-    Method method2 = class_getInstanceMethod(cls, @selector(jh_setObject:forKey:));
     
-    method_exchangeImplementations(method1, method2);
+    // 确保只会被调用一次
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class cls = NSClassFromString(@"__NSDictionaryM");
+        Method method1 = class_getInstanceMethod(cls, @selector(setObject:forKey:));
+        Method method2 = class_getInstanceMethod(cls, @selector(jh_setObject:forKey:));
+        
+        method_exchangeImplementations(method1, method2);
+    });
+    
 }
 
 

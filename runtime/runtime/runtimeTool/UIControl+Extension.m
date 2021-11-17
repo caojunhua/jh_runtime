@@ -11,10 +11,15 @@
 @implementation UIControl (Extension)
 
 + (void)load {
-    // 分类的load方法,程序一加载,就会调用
-    Method method1 = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
-    Method method2 = class_getInstanceMethod(self, @selector(jh_sendAction:to:forEvent:));
-    method_exchangeImplementations(method1, method2);
+    // 确保只会被调用一次
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // 分类的load方法,程序一加载,就会调用
+        Method method1 = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
+        Method method2 = class_getInstanceMethod(self, @selector(jh_sendAction:to:forEvent:));
+        method_exchangeImplementations(method1, method2);
+    });
+    
 }
 
 - (void)jh_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {

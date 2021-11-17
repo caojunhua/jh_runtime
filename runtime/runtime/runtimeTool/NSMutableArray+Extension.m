@@ -15,10 +15,15 @@
     // 报错: *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
 //    *** First throw call stack:
     // 所以知道真实类型应该是 __NSArrayM 类型
-    Class cls = NSClassFromString(@"__NSArrayM");
-    Method method1 = class_getInstanceMethod(cls, @selector(insertObject:atIndex:));
-    Method method2 = class_getInstanceMethod(cls, @selector(jh_insertObject:atIndex:));
-    method_exchangeImplementations(method1, method2);
+    // 确保只会被调用一次
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class cls = NSClassFromString(@"__NSArrayM");
+        Method method1 = class_getInstanceMethod(cls, @selector(insertObject:atIndex:));
+        Method method2 = class_getInstanceMethod(cls, @selector(jh_insertObject:atIndex:));
+        method_exchangeImplementations(method1, method2);
+    });
+   
 }
 
 - (void)jh_insertObject:(id)anObject atIndex:(NSUInteger)index {
