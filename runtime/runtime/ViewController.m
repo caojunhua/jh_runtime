@@ -10,6 +10,7 @@
 #import "NSObject+myJson.h"
 #import <objc/runtime.h>
 #import "JHCar.h"
+#import "RunloopViewController.h"
 
 @interface ViewController ()
 
@@ -27,6 +28,9 @@
     
     [self testNSMutableDictionary];
     
+}
+- (IBAction)jumpRunloopBtn:(id)sender {
+    [self.navigationController showViewController:[[RunloopViewController alloc] init] sender:nil];
 }
 
 - (void)testNSMutableDictionary {

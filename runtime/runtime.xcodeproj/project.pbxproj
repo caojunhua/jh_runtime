@@ -22,6 +22,9 @@
 		F89272022745430B00DE9FA6 /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F89272012745430B00DE9FA6 /* UIControl+Extension.m */; };
 		F8927208274544A800DE9FA6 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F8927207274544A800DE9FA6 /* NSMutableArray+Extension.m */; };
 		F89272172745485200DE9FA6 /* NSMutableDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F89272162745485200DE9FA6 /* NSMutableDictionary+Extension.m */; };
+		F8927222276232B700DE9FA6 /* RunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8927220276232B700DE9FA6 /* RunloopViewController.m */; };
+		F8927223276232B700DE9FA6 /* RunloopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8927221276232B700DE9FA6 /* RunloopViewController.xib */; };
+		F892722A2762345400DE9FA6 /* JHPermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F89272292762345400DE9FA6 /* JHPermanentThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,11 @@
 		F8927207274544A800DE9FA6 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		F89272152745485200DE9FA6 /* NSMutableDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Extension.h"; sourceTree = "<group>"; };
 		F89272162745485200DE9FA6 /* NSMutableDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Extension.m"; sourceTree = "<group>"; };
+		F892721F276232B700DE9FA6 /* RunloopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopViewController.h; sourceTree = "<group>"; };
+		F8927220276232B700DE9FA6 /* RunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopViewController.m; sourceTree = "<group>"; };
+		F8927221276232B700DE9FA6 /* RunloopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunloopViewController.xib; sourceTree = "<group>"; };
+		F89272282762345400DE9FA6 /* JHPermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHPermanentThread.h; sourceTree = "<group>"; };
+		F89272292762345400DE9FA6 /* JHPermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHPermanentThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 		F8927136273EAEE700DE9FA6 /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				F892721B2762309800DE9FA6 /* runloop */,
 				F892717F273EB2B900DE9FA6 /* runtimeTool */,
 				F892717E273EB2A300DE9FA6 /* Module */,
 				F8927137273EAEE700DE9FA6 /* AppDelegate.h */,
@@ -181,6 +190,26 @@
 				F89272162745485200DE9FA6 /* NSMutableDictionary+Extension.m */,
 			);
 			path = runtimeTool;
+			sourceTree = "<group>";
+		};
+		F892721B2762309800DE9FA6 /* runloop */ = {
+			isa = PBXGroup;
+			children = (
+				F89272272762342D00DE9FA6 /* JHPermanentThread */,
+				F892721F276232B700DE9FA6 /* RunloopViewController.h */,
+				F8927220276232B700DE9FA6 /* RunloopViewController.m */,
+				F8927221276232B700DE9FA6 /* RunloopViewController.xib */,
+			);
+			path = runloop;
+			sourceTree = "<group>";
+		};
+		F89272272762342D00DE9FA6 /* JHPermanentThread */ = {
+			isa = PBXGroup;
+			children = (
+				F89272282762345400DE9FA6 /* JHPermanentThread.h */,
+				F89272292762345400DE9FA6 /* JHPermanentThread.m */,
+			);
+			path = JHPermanentThread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8927223276232B700DE9FA6 /* RunloopViewController.xib in Resources */,
 				F8927147273EAEE800DE9FA6 /* LaunchScreen.storyboard in Resources */,
 				F8927144273EAEE800DE9FA6 /* Assets.xcassets in Resources */,
 				F8927142273EAEE700DE9FA6 /* Main.storyboard in Resources */,
@@ -314,7 +344,9 @@
 			files = (
 				F8927182273EB2E000DE9FA6 /* JHPerson.m in Sources */,
 				F892717A273EAFDA00DE9FA6 /* NSObject+myJson.m in Sources */,
+				F892722A2762345400DE9FA6 /* JHPermanentThread.m in Sources */,
 				F892713F273EAEE700DE9FA6 /* ViewController.m in Sources */,
+				F8927222276232B700DE9FA6 /* RunloopViewController.m in Sources */,
 				F89272172745485200DE9FA6 /* NSMutableDictionary+Extension.m in Sources */,
 				F8927139273EAEE700DE9FA6 /* AppDelegate.m in Sources */,
 				F892714A273EAEE800DE9FA6 /* main.m in Sources */,
